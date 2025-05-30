@@ -1,0 +1,9 @@
+{
+    "gene": "BRCA1",
+    "mutation": "185delAG",
+    "clinicalSignificance": "Pathogenic",
+    "scope": "ClinicalResearch",
+    "validUntil": "2030-01-01",
+    "tags": ["breast cancer", "genetics", "hereditary"],
+    "source": "ClinVar"
+  }
