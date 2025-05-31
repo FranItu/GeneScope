@@ -32,3 +32,4 @@ repo-structure.txt
 # Ignore large dataset files
 *.xml
 *.xml.gz
+*.faa

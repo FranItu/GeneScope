@@ -5,7 +5,8 @@
     "esModuleInterop": true,
     "strict": true,
     "resolveJsonModule": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "types": ["node","hardhat"]
   },
   "include": ["scripts"]
 }
