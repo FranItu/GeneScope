@@ -33,3 +33,13 @@ repo-structure.txt
 *.xml
 *.xml.gz
 *.faa
+
+# Local biological datasets
+/db/
+!/db/*.faa
+/db/proteins_dataset.json
+/db/build/
+
+# Sample data
+data/sample_data/
+
