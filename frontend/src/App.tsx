@@ -1,7 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import UploadClaim from './UploadClaim'; // Your original App.tsx (renamed)
+//import UploadClaim from './components/EnhancedUploadClaim'; // Your original App.tsx (renamed)
+import EnhancedUploadClaim from './components/EnhancedUploadClaim';
 import './App.css';
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           
           {/* Your existing upload claim functionality (unchanged) */}
-          <Route path="/app" element={<UploadClaim />} />
-          <Route path="/upload" element={<UploadClaim />} />
-          <Route path="/claim" element={<UploadClaim />} />
+          <Route path="/app" element={<EnhancedUploadClaim />} />
+          <Route path="/upload" element={<EnhancedUploadClaim />} />
+          <Route path="/claim" element={<EnhancedUploadClaim />} />
           
           {/* Redirect any unknown routes to landing */}
           <Route path="*" element={<Navigate to="/" replace />} />

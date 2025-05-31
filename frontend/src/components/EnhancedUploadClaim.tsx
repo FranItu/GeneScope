@@ -7,66 +7,58 @@ const EnhancedUploadClaim: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f9fafb' }}>
-      <header style={{ 
-        backgroundColor: 'white', 
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)', 
-        borderBottom: '1px solid #e5e7eb' 
-      }}>
-        <div style={{ 
-          maxWidth: '1200px', 
-          margin: '0 auto', 
-          padding: '0 1rem',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          height: '4rem'
-        }}>
-          <button
-            onClick={() => navigate('/')}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              color: '#6b7280',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '1rem',
-              transition: 'color 0.2s'
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#2563eb'}
-            onMouseLeave={(e) => e.currentTarget.style.color = '#6b7280'}
-          >
-            <ArrowLeft size={20} />
-            Back to Homepage
-          </button>
-          
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <div style={{
-              background: 'linear-gradient(to right, #2563eb, #4f46e5)',
-              padding: '0.5rem',
-              borderRadius: '0.5rem'
-            }}>
-              <Dna size={24} color="white" />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      {/* Header */}
+      <header className="bg-white/80 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center py-4 relative">
+            {/* Back Button - Left Side */}
+            <button
+              onClick={() => navigate('/')}
+              className="absolute left-0 flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              <ArrowLeft className="h-5 w-5" />
+              Back to Homepage
+            </button>
+            
+            {/* Centered Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
+                <Dna className="h-8 w-8 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  PBR
+                </h1>
+                <p className="text-sm text-gray-600">Polymerase Blockchain Reaction</p>
+              </div>
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
+                <Dna className="h-8 w-8 text-white" />
+              </div>
             </div>
-            <h1 style={{ 
-              fontSize: '1.5rem', 
-              fontWeight: 'bold', 
-              color: '#111827',
-              margin: 0
-            }}>
-              PBR - Upload Genetic Claims
-            </h1>
           </div>
-          
-          <div></div>
         </div>
       </header>
 
-      <main style={{ padding: '2rem 1rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <UploadClaim />
+      {/* Main Content */}
+      <main className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Content Wrapper with Beautiful Styling */}
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+              <h2 className="text-2xl font-bold text-white mb-2">
+                Upload Your Genetic Claims
+              </h2>
+              <p className="text-blue-100">
+                Submit structured genetic claims with comprehensive metadata and ontological precision
+              </p>
+            </div>
+            
+            {/* Upload Component Container */}
+            <div className="p-8">
+              <UploadClaim />
+            </div>
+          </div>
         </div>
       </main>
     </div>

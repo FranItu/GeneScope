@@ -30,30 +30,36 @@ const LandingPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <header className="bg-white/80 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+        <div className="flex justify-center items-center py-4 relative">
+            {/* Centered Logo */}
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
                 <Dna className="h-8 w-8 text-white" />
-              </div>
-              <div>
+                </div>
+                <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  PBR
+                    PBR
                 </h1>
                 <p className="text-sm text-gray-600">Polymerase Blockchain Reaction</p>
-              </div>
+                </div>
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
+                <Dna className="h-8 w-8 text-white" />
+                </div>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors">How It Works</a>
-              <a href="#technologies" className="text-gray-700 hover:text-blue-600 transition-colors">Technologies</a>
-              <a href="#mission" className="text-gray-700 hover:text-blue-600 transition-colors">Mission</a>
-              <button 
+            
+            {/* Navigation moved to absolute right */}
+            <nav className="hidden md:flex space-x-8 absolute right-0">
+                <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors">How It Works</a>
+                <a href="#technologies" className="text-gray-700 hover:text-blue-600 transition-colors">Technologies</a>
+                <a href="#mission" className="text-gray-700 hover:text-blue-600 transition-colors">Mission</a>
+                <button 
                 onClick={handleLaunchApp}
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
-              >
+                >
                 Launch App
-              </button>
+                </button>
             </nav>
-          </div>
+            </div>
         </div>
       </header>
 
@@ -173,24 +179,24 @@ const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all">
-              <Database className="h-12 w-12 text-blue-600 mb-4" />
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all text-center">
+              <Database className="h-12 w-12 text-blue-600 mb-4 mx-auto" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Ontological Structures</h3>
               <p className="text-gray-600">
                 Built-in support for gene ontologies and scientific frameworks ensuring data interoperability and standardization.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all">
-              <Lock className="h-12 w-12 text-indigo-600 mb-4" />
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all text-center">
+              <Lock className="h-12 w-12 text-indigo-600 mb-4 mx-auto" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Privacy First</h3>
               <p className="text-gray-600">
                 Advanced privacy controls with decentralized storage, giving researchers full control over their sensitive genetic data.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all">
-              <Globe className="h-12 w-12 text-purple-600 mb-4" />
+            <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all text-center">
+              <Globe className="h-12 w-12 text-purple-600 mb-4 mx-auto" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Global Interoperability</h3>
               <p className="text-gray-600">
                 Cross-platform compatibility enabling seamless integration with existing research infrastructure and tools.
