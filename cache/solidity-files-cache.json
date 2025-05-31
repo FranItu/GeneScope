@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\MSI - STEELSERIES\\OneDrive - Prirodoslovno-matematički fakultet\\HQ\\CP\\Projects\\ETHPRAGUE\\GeneScope\\contracts\\GeneScope.sol": {
+      "lastModificationDate": 1748638074728,
+      "contentHash": "c21437d72afe9deff416ea346f316a5c",
+      "sourceName": "contracts/GeneScope.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "GeneScope"
+      ]
+    }
+  }
+}

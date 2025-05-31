@@ -20,6 +20,11 @@ contract GeneScope {
     mapping(uint256 => DataClaim) public claims;
     uint256 public claimCount;
 
+    modifier onlyOwner(uint256 claimId) {
+        require(claims[claimId].owner == msg.sender, "Not claim owner");
+        _;
+    }
+
     event ClaimCreated(
         uint256 indexed claimId,
         address indexed owner,
@@ -57,5 +62,8 @@ contract GeneScope {
 
     function getClaim(uint256 _id) public view returns (DataClaim memory) {
         return claims[_id];
+    }
+    function deleteClaim(uint256 _id) public onlyOwner(_id) {
+        delete claims[_id];
     }
 }
