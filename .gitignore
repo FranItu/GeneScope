@@ -25,3 +25,10 @@ dist-ssr
 
 repo-structure.txt
 *.env
+
+# ClinVar XML dataset
+/data/ClinVarVCVRelease_2024-05.xml
+/data/ClinVarVCVRelease_2024-05.xml.gz
+# Ignore large dataset files
+*.xml
+*.xml.gz

@@ -1,0 +1,12 @@
+{
+    "gene": "BRCA1",
+    "variant": "c.68_69delAG",
+    "classification": "Pathogenic",
+    "condition": "Breast-ovarian cancer, familial 1",
+    "submitter": "ClinVar_Public",
+    "tags": ["BRCA1", "pathogenic", "cancer", "clinvar"],
+    "ontology": ["HP:0003002", "GO:0006281"],
+    "scope": 2,
+    "validUntil": "2026-01-01"
+  }
+  
