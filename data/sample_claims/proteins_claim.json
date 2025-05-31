@@ -1,0 +1,11 @@
+{
+  "dataset": "ipfs://bafy.../proteins_v1.faa",
+  "format": "FASTA (.faa)",
+  "description": "Multispecies protein collection from Rhizobium/Agrobacterium group",
+  "source": "NCBI Protein",
+  "ontology": ["GO:0003674", "GO:0008150"],
+  "tags": ["protein", "fasta", "bacteria", "multi-species"],
+  "scope": 2,
+  "validUntil": "2026-01-01",
+  "submitter": "BioScope Foundation"
+}

@@ -49,12 +49,7 @@ export declare namespace GeneScope {
 
 export interface GeneScopeInterface extends Interface {
   getFunction(
-    nameOrSignature:
-      | "claimCount"
-      | "claims"
-      | "createClaim"
-      | "deleteClaim"
-      | "getClaim"
+    nameOrSignature: "claimCount" | "claims" | "createClaim" | "getClaim"
   ): FunctionFragment;
 
   getEvent(nameOrSignatureOrTopic: "ClaimCreated"): EventFragment;
@@ -72,10 +67,6 @@ export interface GeneScopeInterface extends Interface {
     values: [string, BigNumberish, BigNumberish, string[]]
   ): string;
   encodeFunctionData(
-    functionFragment: "deleteClaim",
-    values: [BigNumberish]
-  ): string;
-  encodeFunctionData(
     functionFragment: "getClaim",
     values: [BigNumberish]
   ): string;
@@ -84,10 +75,6 @@ export interface GeneScopeInterface extends Interface {
   decodeFunctionResult(functionFragment: "claims", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "createClaim",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "deleteClaim",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "getClaim", data: BytesLike): Result;
@@ -193,8 +180,6 @@ export interface GeneScope extends BaseContract {
     "nonpayable"
   >;
 
-  deleteClaim: TypedContractMethod<[_id: BigNumberish], [void], "nonpayable">;
-
   getClaim: TypedContractMethod<
     [_id: BigNumberish],
     [GeneScope.DataClaimStructOutput],
@@ -234,9 +219,6 @@ export interface GeneScope extends BaseContract {
     [void],
     "nonpayable"
   >;
-  getFunction(
-    nameOrSignature: "deleteClaim"
-  ): TypedContractMethod<[_id: BigNumberish], [void], "nonpayable">;
   getFunction(
     nameOrSignature: "getClaim"
   ): TypedContractMethod<

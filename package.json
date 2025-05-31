@@ -1,38 +1,21 @@
 {
   "name": "genescope",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "Context-aware governance of genetic data using decentralized infrastructure",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "dotenv": "^16.5.0",
-    "ethers": "^6.14.3",
-    "form-data": "^4.0.2",
-    "node-fetch": "^3.3.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "web3.storage": "^4.5.5"
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network sepolia",
+    "dev": "cd frontend && npm run dev"
   },
   "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@nomicfoundation/hardhat-ethers": "^3.0.8",
-    "@nomiclabs/hardhat-etherscan": "^3.1.8",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.2",
-    "@vitejs/plugin-react": "^4.4.1",
-    "eslint": "^9.25.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "~5.8.3",
-    "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^18.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/chai": "^4.3.0",
+    "hardhat": "^2.19.0",
+    "typescript": "^5.0.0",
+    "ethers": "^6.0.0",
+    "dotenv": "^16.0.0"
   }
 }
